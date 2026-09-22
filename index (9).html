@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mill Creek Systems — Modern Systems for Physical Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root { box-sizing: border-box; }
+  * { box-sizing: inherit; }
+  body { margin: 0; background: #E7E7E7; color: #2A2420; font-family: 'Source Serif 4', Georgia, serif; }
+  a { text-decoration: none; color: inherit; }
+  a.cta { transition: background 0.15s ease; }
+  a.cta:hover { background: #7A461C !important; }
+  a.textlink { border-bottom: 1px solid #985925; }
+  a.textlink:hover { color: #7A461C; border-bottom-color: #7A461C; }
+  a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #985925; outline-offset: 3px; }
+  .container { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 40px; }
+  .hairline { border: none; border-top: 1px solid #D6D2CB; margin: 0; }
+  .tag { font-family: 'Source Serif 4', Georgia, serif; font-variant: small-caps; font-size: 15px; letter-spacing: 0.04em; color: #8C8073; }
+  .row { display: flex; }
+  .num { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 40px; color: #985925; flex: 0 0 90px; }
+  .label { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 24px; margin-bottom: 8px; }
+  .field-input {
+    width: 100%; border: none; border-bottom: 1px solid #D6D2CB; background: transparent;
+    font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; color: #2A2420;
+    padding: 10px 2px;
+  }
+  .field-input::placeholder { color: #8C8073; }
+  .hero-line { display: block; opacity: 0; transform: translateY(16px); animation: riseFade 0.7s ease forwards; }
+  .hero-line:nth-child(1) { animation-delay: 0.05s; }
+  .hero-line:nth-child(2) { animation-delay: 0.22s; }
+  .hero-line:nth-child(3) { animation-delay: 0.39s; }
+  @keyframes riseFade { to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .hero-line { animation: none; opacity: 1; transform: none; } }
+  @media (max-width: 760px) {
+    .container { padding: 0 24px; }
+    .hero-head { font-size: 38px !important; }
+    .method-row, .track-row, .who-row, .top-row, .contact-row { flex-direction: column !important; align-items: flex-start !important; }
+    .contact-row > div { flex-basis: auto !important; width: 100%; }
+    .who-right { padding-left: 0 !important; margin-top: 24px; }
+    .track-scope { padding-left: 0 !important; margin-top: 6px; }
+    .tag-col { flex-basis: auto !important; margin-bottom: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100vh;">
+
+  <!-- top bar -->
+  <div class="container" style="padding-top: 24px; padding-bottom: 24px;">
+    <div class="row top-row" style="justify-content: space-between; align-items: center;">
+      <div style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 28px;">Mill Creek Systems</div>
+      <a class="tag textlink" href="#contact">Start a conversation</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px; position: relative;">
+    <h1 class="hero-head" style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 900; font-size: 64px; line-height: 1.08;">
+      <span class="hero-line">Modern systems</span><span class="hero-line">for businesses</span><span class="hero-line">that work with their hands.</span>
+    </h1>
+    <p style="max-width: 620px; font-size: 20px; line-height: 1.55; margin-top: 32px;">
+      Mill Creek Systems takes the paperwork and reconciliation off your plate, picks or builds the CRM and ERP that actually fits how your business runs, and retires the stale processes standing in the way. Your crew stays on the physical work. The back office finally works too.
+    </p>
+    <a class="cta" href="#contact" style="display: inline-block; margin-top: 36px; background: #985925; color: #E7E7E7; font-family: 'Playfair Display', serif; font-style: normal; font-weight: 700; font-size: 18px; padding: 14px 30px;">Start a conversation</a>
+  </div>
+
+  <!-- who this is for -->
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Playfair Display', serif; font-weight: 800; font-size: 36px; margin-bottom: 28px;">Who this is for</div>
+    <div class="row who-row" style="gap: 64px; align-items: flex-start;">
+      <p style="flex: 1 1 320px; font-size: 19px; line-height: 1.6; margin: 0;">
+        Most companies in this region are too small to justify a full time operations executive, but the work that role covers does not shrink to fit. This is that full range of work, brought in only for as long as it is needed.
+      </p>
+      <div class="who-right" style="flex: 1 1 320px; padding-left: 8px;">
+        <div style="border-top: 1px solid #D6D2CB; padding: 14px 0; font-size: 17px;">Supply chain, inventory, and demand forecasting</div>
+        <div style="border-top: 1px solid #D6D2CB; padding: 14px 0; font-size: 17px;">Fleet dispatch, routing, and load planning</div>
+        <div style="border-top: 1px solid #D6D2CB; padding: 14px 0; font-size: 17px;">Vendor and carrier negotiation, freight and transportation cost reduction</div>
+        <div style="border-top: 1px solid #D6D2CB; padding: 14px 0; font-size: 17px;">Budgeting, KPI reporting, and executive dashboards</div>
+        <div style="border-top: 1px solid #D6D2CB; padding: 14px 0; font-size: 17px;">Process design, standard operating procedures, and ERP systems including Spruce, SAP, Oracle, and Dynamics</div>
+        <div style="border-top: 1px solid #D6D2CB; border-bottom: 1px solid #D6D2CB; padding: 14px 0; font-size: 17px;">Data cleanup and analysis across systems that don't talk to each other, so the numbers can actually be trusted</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the method -->
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Playfair Display', serif; font-weight: 800; font-size: 36px; margin-bottom: 28px;">The method</div>
+
+    <div class="row method-row" style="gap: 40px; padding: 28px 0; border-top: 1px solid #D6D2CB;">
+      <div class="num">01</div>
+      <div style="flex: 1;">
+        <div class="label">Strategize</div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 560px;">Map how work actually moves through the business today, not how the org chart says it should. Find where time, money, and information get stuck.</p>
+      </div>
+    </div>
+
+    <div class="row method-row" style="gap: 40px; padding: 28px 0; border-top: 1px solid #D6D2CB;">
+      <div class="num">02</div>
+      <div style="flex: 1;">
+        <div class="label">Optimize</div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 560px;">Redesign the workflow, the dispatch logic, the inventory rules, or the reporting so the fix matches how the business really operates.</p>
+      </div>
+    </div>
+
+    <div class="row method-row" style="gap: 40px; padding: 28px 0; border-top: 1px solid #D6D2CB; border-bottom: 1px solid #D6D2CB;">
+      <div class="num">03</div>
+      <div style="flex: 1;">
+        <div class="label">Implement</div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 560px;">Build it, train the team on it, and stay through the rollout until it runs without hand holding.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- track record -->
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Playfair Display', serif; font-weight: 800; font-size: 36px; margin-bottom: 28px;">Track record</div>
+
+    <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #D6D2CB;">
+      <div class="tag tag-col" style="flex: 0 0 210px;">Ben's Contractor Center<br><span style="color: #ADA394;">2026</span></div>
+      <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Built a live customer facing delivery tracker and automated SMS notifications from scratch, replacing a process where nobody, including the office, knew where a load actually was.</div>
+    </div>
+
+    <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #D6D2CB;">
+      <div class="tag tag-col" style="flex: 0 0 210px;">Green Courte Residential Holdings<br><span style="color: #ADA394;">2022</span></div>
+      <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Built inventory and purchasing forecasts across a one hundred thirty million dollar, twenty one community portfolio, expanding it by more than three hundred seventy homes.</div>
+    </div>
+
+    <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #D6D2CB;">
+      <div class="tag tag-col" style="flex: 0 0 210px;">Vispero LLC<br><span style="color: #ADA394;">2018</span></div>
+      <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Cut per container freight cost by two thousand dollars across roughly fifteen containers a month, saving three hundred sixty thousand dollars a year in international shipping.</div>
+    </div>
+
+    <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #D6D2CB; border-bottom: 1px solid #D6D2CB;">
+      <div class="tag tag-col" style="flex: 0 0 210px;">AJR Enterprises<br><span style="color: #ADA394;">2013</span></div>
+      <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Scaled fulfillment through one hundred percent company growth with zero headcount added, and cut annual transportation spend by one hundred fifty thousand dollars through carrier consolidation.</div>
+    </div>
+  </div>
+
+  <!-- engagement model -->
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Playfair Display', serif; font-weight: 800; font-size: 36px; margin-bottom: 28px;">How this works</div>
+    <p style="max-width: 680px; font-size: 19px; line-height: 1.6; margin: 0;">
+      Engagements are fractional and contracted, not a full time hire. Some clients need a single project done right: a dispatch system built, an inventory process fixed. Others want ongoing oversight on a set number of hours each month. Scope and cost get defined before any work starts, so there are no surprises on either side.
+    </p>
+  </div>
+
+  <!-- contact form -->
+  <div class="container" id="contact" style="padding-top: 64px; padding-bottom: 80px;">
+    <div class="tag" style="margin-bottom: 20px;">Start a conversation</div>
+    <div style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 40px; line-height: 1.1; max-width: 560px; margin-bottom: 40px;">Tell us about the operation.</div>
+
+    <form action="https://formspree.io/f/xqpaqjar" method="POST" style="max-width: 560px;">
+      <input type="hidden" name="_subject" value="New inquiry from the Mill Creek Systems website">
+      <div style="margin-bottom: 26px;">
+        <label class="tag" for="f-name" style="display: block; margin-bottom: 8px;">Name</label>
+        <input class="field-input" id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+      </div>
+      <div style="margin-bottom: 26px;">
+        <label class="tag" for="f-company" style="display: block; margin-bottom: 8px;">Company name</label>
+        <input class="field-input" id="f-company" name="company" type="text" placeholder="Your company" autocomplete="organization" required>
+      </div>
+      <div style="margin-bottom: 26px;">
+        <label class="tag" for="f-location" style="display: block; margin-bottom: 8px;">Location</label>
+        <input class="field-input" id="f-location" name="location" type="text" placeholder="City, state" autocomplete="address-level2" required>
+      </div>
+      <div class="row contact-row" style="gap: 24px;">
+        <div style="flex: 0 0 160px; margin-bottom: 26px;">
+          <label class="tag" for="f-contact-type" style="display: block; margin-bottom: 8px;">Contact by</label>
+          <select class="field-input" id="f-contact-type" name="contact_type" required>
+            <option value="Email">Email</option>
+            <option value="Phone">Phone</option>
+          </select>
+        </div>
+        <div style="flex: 1; margin-bottom: 26px;">
+          <label class="tag" for="f-contact-info" style="display: block; margin-bottom: 8px;">Contact information</label>
+          <input class="field-input" id="f-contact-info" name="contact_info" type="text" placeholder="Email address or phone number" autocomplete="email" required>
+        </div>
+      </div>
+      <div style="margin-bottom: 34px;">
+        <label class="tag" for="f-description" style="display: block; margin-bottom: 8px;">Description of services requested</label>
+        <textarea class="field-input" id="f-description" name="message" rows="4" placeholder="What's going on, and what you need help with" style="resize: vertical; font-family: 'Source Serif 4', Georgia, serif;" required></textarea>
+      </div>
+      <button type="submit" class="cta" style="display: inline-block; background: #985925; color: #E7E7E7; font-family: 'Playfair Display', serif; font-style: normal; font-weight: 700; font-size: 18px; padding: 14px 30px; border: none; cursor: pointer;">Send this to Mill Creek Systems</button>
+      <p style="margin-top: 18px; font-size: 14px; color: #8C8073; max-width: 480px;">This sends directly, no email app required. You'll land on a confirmation page once it goes through.</p>
+    </form>
+
+    <p style="margin-top: 56px; font-size: 14px; color: #8C8073;">Based on Mill Creek in Yale, Michigan. Serving the Thumb region and beyond.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

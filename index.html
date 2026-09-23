@@ -19,7 +19,7 @@
 <meta name="twitter:description" content="Modern systems for businesses that work with their hands.">
 <meta name="twitter:image" content="https://millcreeksystemsmi.github.io/MCS/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root { box-sizing: border-box; }
   * { box-sizing: inherit; }
@@ -30,10 +30,10 @@
   a.textlink { border-bottom: 1px solid #2FADC4; }
   a.textlink:hover { color: #22879A; border-bottom-color: #22879A; }
   a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #2FADC4; outline-offset: 3px; }
-  .container { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+  .container { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 40px; }
+  .hairline { border: none; border-top: 1px solid #C7D6D5; margin: 0; }
   .tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B7280; }
   .row { display: flex; }
-  .section-head { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: #123350; margin-bottom: 28px; }
   .hex-num {
     width: 64px; height: 56px; flex: 0 0 64px;
     background: #123350;
@@ -41,13 +41,6 @@
     display: flex; align-items: center; justify-content: center;
     color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px;
   }
-  .hex-bullet {
-    width: 14px; height: 14px; flex: 0 0 14px;
-    background: #2FADC4;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    display: inline-block; margin-right: 16px; margin-top: 3px;
-  }
-  .list-row { display: flex; align-items: flex-start; padding: 14px 0; }
   .label { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; margin-bottom: 8px; }
   .field-input {
     width: 100%; border: none; border-bottom: 1px solid #C7D6D5; background: transparent;
@@ -55,13 +48,15 @@
     padding: 10px 2px;
   }
   .field-input::placeholder { color: #8DA0A9; }
-  .tech-tag {
-    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 13px;
-    color: #123350; background: rgba(18,51,80,0.08); border: 1px solid rgba(18,51,80,0.18);
-    padding: 5px 12px; border-radius: 3px; margin: 0 8px 8px 0;
-  }
+  .hero-line { display: block; opacity: 0; transform: translateY(16px); animation: riseFade 0.7s ease forwards; }
+  .hero-line:nth-child(1) { animation-delay: 0.05s; }
+  .hero-line:nth-child(2) { animation-delay: 0.22s; }
+  .hero-line:nth-child(3) { animation-delay: 0.39s; }
+  @keyframes riseFade { to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .hero-line { animation: none; opacity: 1; transform: none; } }
   @media (max-width: 760px) {
     .container { padding: 0 24px; }
+    .hero-head { font-size: 30px !important; }
     .method-row, .track-row, .who-row, .top-row, .contact-row { flex-direction: column !important; align-items: flex-start !important; }
     .who-row { gap: 20px !important; }
     .method-row { gap: 12px !important; }
@@ -72,6 +67,7 @@
     .track-scope { padding-left: 0 !important; margin-top: 2px; }
     .tag-col { flex-basis: auto !important; margin-bottom: 4px; }
     .header-tagline { display: none !important; }
+    .method-row .hex-num { margin-bottom: 4px; }
   }
 </style>
 </head>
@@ -93,79 +89,16 @@
   </div>
 
   <!-- hero -->
-  <div style="background: #E7EFEE; position: relative; overflow: hidden;">
-    <svg viewBox="0 0 1000 260" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;" aria-hidden="true">
-      <path d="M -20 210 C 120 140, 200 230, 340 160 C 480 90, 560 200, 700 130 C 820 70, 900 150, 1020 90" fill="none" stroke="#2FADC4" stroke-width="3" stroke-linecap="round" opacity="0.22"/>
-      <path d="M -20 210 C 120 140, 200 230, 340 160 C 480 90, 560 200, 700 130 C 820 70, 900 150, 1020 90" fill="none" stroke="#1F7A47" stroke-width="1.4" stroke-dasharray="1,10" stroke-linecap="round" opacity="0.28"/>
-    </svg>
-    <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-      <p style="max-width: 620px; font-size: 20px; line-height: 1.6; margin: 0;">
-        Mill Creek Systems takes the paperwork and reconciliation off your plate, builds or fixes whatever systems the business actually needs, and retires the stale processes standing in the way. Whether that's a fleet of trucks or a portfolio of properties, your team stays on the actual work. The back office finally works too.
-      </p>
-      <a class="cta" href="#contact" style="display: inline-block; margin-top: 28px; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.02em; padding: 15px 30px;">Start a conversation</a>
-    </div>
-  </div>
-
-  <!-- who this is for -->
-  <div style="background: #DCE6E4;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">Who this is for</div>
-    <div class="row who-row" style="gap: 64px; align-items: flex-start;">
-      <p style="flex: 1 1 320px; font-size: 19px; line-height: 1.6; margin: 0;">
-        Most companies in this region are too small to justify a full time operations executive, but the work that role covers does not shrink to fit. This is that full range of work, brought in only for as long as it is needed.
-      </p>
-      <div class="who-right" style="flex: 1 1 320px; padding-left: 8px;">
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Supply chain, inventory, and demand forecasting</span></div>
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Real estate and property portfolio management, occupancy and construction forecasting</span></div>
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Fleet dispatch, routing, and load planning</span></div>
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Vendor and carrier negotiation, freight and transportation cost reduction</span></div>
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Budgeting, KPI reporting, and executive dashboards</span></div>
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Process design, standard operating procedures, and ERP systems including Spruce, SAP, Oracle, and Dynamics</span></div>
-        <div class="list-row"><span class="hex-bullet"></span><span style="font-size: 17px;">Data cleanup and analysis across systems that don't talk to each other, so the numbers can actually be trusted</span></div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- ways we help -->
-  <div style="background: #E7EFEE;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">Ways we help</div>
-    <p style="max-width: 680px; font-size: 18px; line-height: 1.6; margin: 0 0 20px 0;">
-      Not every business needs new software, and some don't want it at all. These are the different ways to work together, picked to fit what the business actually needs, not the other way around.
+  <div class="container" style="padding-top: 48px; padding-bottom: 56px; position: relative;">
+    <p style="max-width: 620px; font-size: 20px; line-height: 1.6; margin: 0;">
+      Mill Creek Systems takes the paperwork and reconciliation off your plate, builds or fixes whatever systems the business actually needs, and retires the stale processes standing in the way. Your crew stays on the physical work. The back office finally works too.
     </p>
-
-    <div class="list-row" style="align-items: flex-start; flex-direction: column;">
-      <div class="label">Process and operations consulting</div>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Sometimes the fix isn't a new system, it's the workflow itself. Routing, staffing, load planning, and standard procedures get rebuilt to match how the business actually runs, with no software changes required.</p>
-    </div>
-
-    <div class="list-row" style="align-items: flex-start; flex-direction: column;">
-      <div class="label">System selection and implementation</div>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">For businesses ready to move off paper and spreadsheets, this covers picking the software that actually fits, or building something custom when nothing off the shelf does.</p>
-    </div>
-
-    <div class="list-row" style="align-items: flex-start; flex-direction: column;">
-      <div class="label">Data cleanup and reconciliation</div>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Existing systems get sorted out so the numbers can be trusted again, no replacement required, just getting what's already there to actually work.</p>
-    </div>
-
-    <div class="list-row" style="align-items: flex-start; flex-direction: column;">
-      <div class="label">Fractional operations oversight</div>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Ongoing, part time coverage of the operations role itself, for businesses that need the position filled without the cost of a full time hire.</p>
-    </div>
-
-    <div class="list-row" style="align-items: flex-start; flex-direction: column;">
-      <div class="label">Training and handoff</div>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Once something is built or fixed, the team gets trained to run it, and Mill Creek Systems steps back rather than staying indefinitely.</p>
-    </div>
-  </div>
+    <a class="cta" href="#contact" style="display: inline-block; margin-top: 28px; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.02em; padding: 15px 30px;">Start a conversation</a>
   </div>
 
-  <!-- digital business solutions -->
-  <div style="background: #DCE6E4;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">Digital Business Solutions</div>
+  <!-- plain terms -->
+  <div class="container" style="padding-top: 0; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">Digital Business Solutions</div>
     <div class="row who-row" style="gap: 64px; align-items: flex-start;">
       <p style="flex: 1 1 320px; font-size: 18px; line-height: 1.6; margin: 0;">
         A CRM, short for customer relationship manager, is just a system for keeping track of who your customers are, what they've bought or asked for, and what still needs a follow up call, so that information doesn't live only in one person's head or one stack of sticky notes.
@@ -190,61 +123,66 @@
       </p>
     </div>
   </div>
-  </div>
 
-  <!-- what gets built -->
-  <div style="background: #E7EFEE;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">What gets built</div>
-    <p style="max-width: 680px; font-size: 18px; line-height: 1.6; margin: 0 0 28px 0;">
-      When a custom build is the right call, it's built the way real software gets built, not a spreadsheet with extra steps. Here's what that actually involves.
-    </p>
-
-    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
-      <div class="label" style="font-size: 19px;">Live tracking and notification systems</div>
-      <p style="margin: 0 0 12px 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Systems that pull live data from an existing platform, sync it in real time, and automatically trigger text or email updates the moment something changes.</p>
-      <span class="tech-tag">Python</span><span class="tech-tag">Firebase</span><span class="tech-tag">SMS APIs</span><span class="tech-tag">GraphQL and REST integrations</span>
-    </div>
-
-    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
-      <div class="label" style="font-size: 19px;">Forecasting models and executive reporting</div>
-      <p style="margin: 0 0 12px 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Models built to project occupancy, sales performance, and construction or delivery timelines, feeding budget-to-actual reports and executive dashboards that ownership and leadership actually use.</p>
-      <span class="tech-tag">Forecasting models</span><span class="tech-tag">Executive dashboards</span><span class="tech-tag">Budget-to-actual reporting</span>
-    </div>
-
-    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
-      <div class="label" style="font-size: 19px;">Custom dashboards and reporting</div>
-      <p style="margin: 0 0 12px 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Web based tools that turn raw operational data into the specific reports a business actually needs, on-time performance, fleet mileage, compliance, built to match how the business tracks things, not a generic template.</p>
-      <span class="tech-tag">Custom web apps</span><span class="tech-tag">Automated reporting</span>
-    </div>
-
-    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
-      <div class="label" style="font-size: 19px;">System integrations</div>
-      <p style="margin: 0 0 12px 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Connecting software that was never designed to talk to each other, an ERP, a dispatch platform, a spreadsheet someone still swears by, so data moves automatically instead of getting retyped by hand.</p>
-      <span class="tech-tag">API integration</span><span class="tech-tag">Data pipelines</span>
-    </div>
-
-    <div style="border-top: 1px solid #C7D6D5; border-bottom: 1px solid #C7D6D5; padding: 22px 0;">
-      <div class="label" style="font-size: 19px;">Data cleanup and reconciliation tooling</div>
-      <p style="margin: 0 0 12px 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Scripts and small tools built specifically to find where records don't match across systems and fix it, rather than someone manually cross checking spreadsheets every month.</p>
-      <span class="tech-tag">Python</span><span class="tech-tag">Data validation</span>
+  <!-- who this is for -->
+  <div class="container" style="padding-top: 0; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">Who this is for</div>
+    <div class="row who-row" style="gap: 64px; align-items: flex-start;">
+      <p style="flex: 1 1 320px; font-size: 19px; line-height: 1.6; margin: 0;">
+        Most companies in this region are too small to justify a full time operations executive, but the work that role covers does not shrink to fit. This is that full range of work, brought in only for as long as it is needed.
+      </p>
+      <div class="who-right" style="flex: 1 1 320px; padding-left: 8px;">
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Supply chain, inventory, and demand forecasting</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Fleet dispatch, routing, and load planning</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Vendor and carrier negotiation, freight and transportation cost reduction</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Budgeting, KPI reporting, and executive dashboards</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Process design, standard operating procedures, and ERP systems including Spruce, SAP, Oracle, and Dynamics</div>
+        <div style="border-top: 1px solid #C7D6D5; border-bottom: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Data cleanup and analysis across systems that don't talk to each other, so the numbers can actually be trusted</div>
+      </div>
     </div>
   </div>
+
+  <!-- the method -->
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">The method</div>
+
+    <div class="row method-row" style="gap: 28px; padding: 28px 0; border-top: 1px solid #C7D6D5; align-items: center;">
+      <div class="hex-num">01</div>
+      <div style="flex: 1;">
+        <div class="label">Strategize</div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 560px;">Map how work actually moves through the business today, not how the org chart says it should. Find where time, money, and information get stuck.</p>
+      </div>
+    </div>
+
+    <div class="row method-row" style="gap: 28px; padding: 28px 0; border-top: 1px solid #C7D6D5; align-items: center;">
+      <div class="hex-num">02</div>
+      <div style="flex: 1;">
+        <div class="label">Optimize</div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 560px;">Redesign the workflow, the dispatch logic, the inventory rules, or the reporting so the fix matches how the business really operates.</p>
+      </div>
+    </div>
+
+    <div class="row method-row" style="gap: 28px; padding: 28px 0; border-top: 1px solid #C7D6D5; border-bottom: 1px solid #C7D6D5; align-items: center;">
+      <div class="hex-num">03</div>
+      <div style="flex: 1;">
+        <div class="label">Implement</div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 560px;">Build it, train the team on it, and stay through the rollout until it runs without hand holding.</p>
+      </div>
+    </div>
   </div>
 
   <!-- track record -->
-  <div style="background: #DCE6E4;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">Track record</div>
-
-    <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #C7D6D5;">
-      <div class="tag tag-col" style="flex: 0 0 210px;">Green Courte Residential Holdings<br><span style="color: #7B93A0;">2022</span></div>
-      <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Built occupancy, sales, and construction forecasting models across a one hundred thirty million dollar, twenty one community portfolio, expanding it by more than three hundred seventy homes and generating roughly twenty nine million dollars in retail value.</div>
-    </div>
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">Track record</div>
 
     <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #C7D6D5;">
       <div class="tag tag-col" style="flex: 0 0 210px;">Ben's Contractor Center<br><span style="color: #7B93A0;">2026</span></div>
       <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Built a live customer facing delivery tracker and automated SMS notifications from scratch, replacing a process where nobody, including the office, knew where a load actually was.</div>
+    </div>
+
+    <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #C7D6D5;">
+      <div class="tag tag-col" style="flex: 0 0 210px;">Green Courte Residential Holdings<br><span style="color: #7B93A0;">2022</span></div>
+      <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Built inventory and purchasing forecasts across a one hundred thirty million dollar, twenty one community portfolio, expanding it by more than three hundred seventy homes.</div>
     </div>
 
     <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #C7D6D5;">
@@ -257,34 +195,28 @@
       <div class="track-scope" style="flex: 1; font-size: 17px; line-height: 1.55; padding-left: 8px;">Scaled fulfillment through one hundred percent company growth with zero headcount added, and cut annual transportation spend by one hundred fifty thousand dollars through carrier consolidation.</div>
     </div>
   </div>
-  </div>
 
   <!-- engagement model -->
-  <div style="background: #E7EFEE;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">How this works</div>
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">How this works</div>
     <p style="max-width: 680px; font-size: 19px; line-height: 1.6; margin: 0;">
-      Engagements are fractional and contracted, rather than a full time hire. Some clients need a single project done right: a dispatch system built, an inventory process fixed. Others want ongoing oversight on a set number of hours each month. Scope and cost get defined before any work starts, so there are no surprises on either side.
+      Engagements are fractional and contracted, not a full time hire. Some clients need a single project done right: a dispatch system built, an inventory process fixed. Others want ongoing oversight on a set number of hours each month. Scope and cost get defined before any work starts, so there are no surprises on either side.
     </p>
-  </div>
   </div>
 
   <!-- about -->
-  <div style="background: #DCE6E4;">
-  <div class="container" style="padding-top: 56px; padding-bottom: 64px;">
-    <div class="section-head">About</div>
+  <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">About</div>
     <p style="max-width: 680px; font-size: 18px; line-height: 1.65; margin: 0;">
-      I've spent the last fifteen years doing the kind of work most companies don't think about until it's already broken. Occupancy and construction forecasting across a hundred million dollar property portfolio. Freight moving across international shipping lanes. A delivery tracking system I built from scratch because the company had never had one. None of it was glamorous, it was dispatch boards, spreadsheets, and numbers that didn't match until somebody sat down and made them match.
+      I'm Greg King, and I've spent the last fifteen years doing the kind of work most companies don't think about until it's already broken. Freight moving across international shipping lanes. Inventory for a housing portfolio worth more than a hundred million dollars. A delivery system I built from nothing because the one that existed didn't. None of it was glamorous, it was dispatch boards, spreadsheets, and numbers that didn't match until somebody sat down and made them match.
     </p>
     <p style="max-width: 680px; font-size: 18px; line-height: 1.65; margin: 20px 0 0 0;">
       I started Mill Creek Systems because I kept ending up as the person who fixes that kind of thing for someone else's company, and there are plenty of businesses around here that need it done and can't justify hiring someone full time to do it. So now I do it on my own terms, for businesses that just need the work done right.
     </p>
   </div>
-  </div>
 
   <!-- contact form -->
-  <div style="background: #E7EFEE;">
-  <div class="container" id="contact" style="padding-top: 56px; padding-bottom: 80px;">
+  <div class="container" id="contact" style="padding-top: 64px; padding-bottom: 80px;">
     <div class="tag" style="margin-bottom: 20px;">Start a conversation</div>
     <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 38px; line-height: 1.15; max-width: 560px; margin-bottom: 40px;">Tell us about the operation.</div>
 
@@ -325,7 +257,6 @@
 
     <p style="margin-top: 56px; font-size: 14px; color: #5B7280;">Call or text <a class="textlink" href="tel:+18102048040" style="color: #123350;">810-204-8040</a>, or reach out through the form above.</p>
     <p style="margin-top: 8px; font-size: 14px; color: #5B7280;">Based on Mill Creek in Yale, Michigan. Serving the Thumb region and beyond.</p>
-  </div>
   </div>
 
 </div>

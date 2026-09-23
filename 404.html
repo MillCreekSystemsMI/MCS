@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Automatically redirect missing paths back to the main site root
-      window.location.replace("https://millcreeksystemsmi.github.io/MCS/");
+      // Fixes lowercase 'mcs' or missing trailing slash from Facebook Mobile links
+      var currentUrl = window.location.href;
+      var correctUrl = currentUrl.replace(/\/mcs(\?|\/|$)/i, "/MCS/");
+      
+      if (currentUrl !== correctUrl) {
+        window.location.replace(correctUrl);
+      } else {
+        window.location.replace("https://millcreeksystemsmi.github.io/MCS/");
+      }
     </script>
-    <meta http-equiv="refresh" content="0; url=https://millcreeksystemsmi.github.io/MCS/" />
   </head>
   <body>
     <p>Redirecting to <a href="https://millcreeksystemsmi.github.io/MCS/">Mill Creek Systems</a>...</p>

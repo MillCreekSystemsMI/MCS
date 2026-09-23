@@ -34,6 +34,7 @@
   .hairline { border: none; border-top: 1px solid #C7D6D5; margin: 0; }
   .tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B7280; }
   .row { display: flex; }
+  .section-head { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: #123350; margin-bottom: 28px; }
   .hex-num {
     width: 64px; height: 56px; flex: 0 0 64px;
     background: #123350;
@@ -48,15 +49,8 @@
     padding: 10px 2px;
   }
   .field-input::placeholder { color: #8DA0A9; }
-  .hero-line { display: block; opacity: 0; transform: translateY(16px); animation: riseFade 0.7s ease forwards; }
-  .hero-line:nth-child(1) { animation-delay: 0.05s; }
-  .hero-line:nth-child(2) { animation-delay: 0.22s; }
-  .hero-line:nth-child(3) { animation-delay: 0.39s; }
-  @keyframes riseFade { to { opacity: 1; transform: translateY(0); } }
-  @media (prefers-reduced-motion: reduce) { .hero-line { animation: none; opacity: 1; transform: none; } }
   @media (max-width: 760px) {
     .container { padding: 0 24px; }
-    .hero-head { font-size: 30px !important; }
     .method-row, .track-row, .who-row, .top-row, .contact-row { flex-direction: column !important; align-items: flex-start !important; }
     .who-row { gap: 20px !important; }
     .method-row { gap: 12px !important; }
@@ -67,7 +61,6 @@
     .track-scope { padding-left: 0 !important; margin-top: 2px; }
     .tag-col { flex-basis: auto !important; margin-bottom: 4px; }
     .header-tagline { display: none !important; }
-    .method-row .hex-num { margin-bottom: 4px; }
   }
 </style>
 </head>
@@ -96,9 +89,60 @@
     <a class="cta" href="#contact" style="display: inline-block; margin-top: 28px; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.02em; padding: 15px 30px;">Start a conversation</a>
   </div>
 
-  <!-- plain terms -->
+  <!-- who this is for -->
   <div class="container" style="padding-top: 0; padding-bottom: 64px;">
-    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">Digital Business Solutions</div>
+    <div class="section-head">Who this is for</div>
+    <div class="row who-row" style="gap: 64px; align-items: flex-start;">
+      <p style="flex: 1 1 320px; font-size: 19px; line-height: 1.6; margin: 0;">
+        Most companies in this region are too small to justify a full time operations executive, but the work that role covers does not shrink to fit. This is that full range of work, brought in only for as long as it is needed.
+      </p>
+      <div class="who-right" style="flex: 1 1 320px; padding-left: 8px;">
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Supply chain, inventory, and demand forecasting</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Fleet dispatch, routing, and load planning</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Vendor and carrier negotiation, freight and transportation cost reduction</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Budgeting, KPI reporting, and executive dashboards</div>
+        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Process design, standard operating procedures, and ERP systems including Spruce, SAP, Oracle, and Dynamics</div>
+        <div style="border-top: 1px solid #C7D6D5; border-bottom: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Data cleanup and analysis across systems that don't talk to each other, so the numbers can actually be trusted</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ways we help -->
+  <div class="container" style="padding-top: 0; padding-bottom: 64px;">
+    <div class="section-head">Ways we help</div>
+    <p style="max-width: 680px; font-size: 18px; line-height: 1.6; margin: 0 0 32px 0;">
+      Not every business needs new software, and some don't want it at all. These are the different ways to work together, picked to fit what the business actually needs, not the other way around.
+    </p>
+
+    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
+      <div class="label">Process and operations consulting</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Sometimes the fix isn't a new system, it's the workflow itself. Routing, staffing, load planning, and standard procedures get rebuilt to match how the business actually runs, with no software changes required.</p>
+    </div>
+
+    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
+      <div class="label">System selection and implementation</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">For businesses ready to move off paper and spreadsheets, this covers picking the software that actually fits, or building something custom when nothing off the shelf does.</p>
+    </div>
+
+    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
+      <div class="label">Data cleanup and reconciliation</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Existing systems get sorted out so the numbers can be trusted again, no replacement required, just getting what's already there to actually work.</p>
+    </div>
+
+    <div style="border-top: 1px solid #C7D6D5; padding: 22px 0;">
+      <div class="label">Fractional operations oversight</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Ongoing, part time coverage of the operations role itself, for businesses that need the position filled without the cost of a full time hire.</p>
+    </div>
+
+    <div style="border-top: 1px solid #C7D6D5; border-bottom: 1px solid #C7D6D5; padding: 22px 0;">
+      <div class="label">Training and handoff</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; max-width: 620px;">Once something is built or fixed, the team gets trained to run it, and Mill Creek Systems steps back rather than staying indefinitely.</p>
+    </div>
+  </div>
+
+  <!-- digital business solutions -->
+  <div class="container" style="padding-top: 0; padding-bottom: 64px;">
+    <div class="section-head">Digital Business Solutions</div>
     <div class="row who-row" style="gap: 64px; align-items: flex-start;">
       <p style="flex: 1 1 320px; font-size: 18px; line-height: 1.6; margin: 0;">
         A CRM, short for customer relationship manager, is just a system for keeping track of who your customers are, what they've bought or asked for, and what still needs a follow up call, so that information doesn't live only in one person's head or one stack of sticky notes.
@@ -124,27 +168,9 @@
     </div>
   </div>
 
-  <!-- who this is for -->
-  <div class="container" style="padding-top: 0; padding-bottom: 64px;">
-    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">Who this is for</div>
-    <div class="row who-row" style="gap: 64px; align-items: flex-start;">
-      <p style="flex: 1 1 320px; font-size: 19px; line-height: 1.6; margin: 0;">
-        Most companies in this region are too small to justify a full time operations executive, but the work that role covers does not shrink to fit. This is that full range of work, brought in only for as long as it is needed.
-      </p>
-      <div class="who-right" style="flex: 1 1 320px; padding-left: 8px;">
-        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Supply chain, inventory, and demand forecasting</div>
-        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Fleet dispatch, routing, and load planning</div>
-        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Vendor and carrier negotiation, freight and transportation cost reduction</div>
-        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Budgeting, KPI reporting, and executive dashboards</div>
-        <div style="border-top: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Process design, standard operating procedures, and ERP systems including Spruce, SAP, Oracle, and Dynamics</div>
-        <div style="border-top: 1px solid #C7D6D5; border-bottom: 1px solid #C7D6D5; padding: 14px 0; font-size: 17px;">Data cleanup and analysis across systems that don't talk to each other, so the numbers can actually be trusted</div>
-      </div>
-    </div>
-  </div>
-
   <!-- the method -->
   <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
-    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">The method</div>
+    <div class="section-head">The method</div>
 
     <div class="row method-row" style="gap: 28px; padding: 28px 0; border-top: 1px solid #C7D6D5; align-items: center;">
       <div class="hex-num">01</div>
@@ -173,7 +199,7 @@
 
   <!-- track record -->
   <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
-    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">Track record</div>
+    <div class="section-head">Track record</div>
 
     <div class="row track-row" style="gap: 32px; padding: 22px 0; border-top: 1px solid #C7D6D5;">
       <div class="tag tag-col" style="flex: 0 0 210px;">Ben's Contractor Center<br><span style="color: #7B93A0;">2026</span></div>
@@ -198,7 +224,7 @@
 
   <!-- engagement model -->
   <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
-    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">How this works</div>
+    <div class="section-head">How this works</div>
     <p style="max-width: 680px; font-size: 19px; line-height: 1.6; margin: 0;">
       Engagements are fractional and contracted, not a full time hire. Some clients need a single project done right: a dispatch system built, an inventory process fixed. Others want ongoing oversight on a set number of hours each month. Scope and cost get defined before any work starts, so there are no surprises on either side.
     </p>
@@ -206,7 +232,7 @@
 
   <!-- about -->
   <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
-    <div class="section-head" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-bottom: 28px;">About</div>
+    <div class="section-head">About</div>
     <p style="max-width: 680px; font-size: 18px; line-height: 1.65; margin: 0;">
       I've spent the last fifteen years doing the kind of work most companies don't think about until it's already broken. Freight moving across international shipping lanes. Inventory for a housing portfolio worth more than a hundred million dollars. A delivery system I built from nothing because the one that existed didn't. None of it was glamorous, it was dispatch boards, spreadsheets, and numbers that didn't match until somebody sat down and made them match.
     </p>

@@ -7,6 +7,8 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" href="favicon.png">
 <title>Mill Creek Systems — Modern Systems for Businesses That Work with Their Hands</title>
+
+<!-- Open Graph / Social Media -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://millcreeksystemsmi.github.io/MCS/">
 <meta property="og:title" content="Mill Creek Systems — Custom Webapps, CRMs & ERPs">
@@ -14,12 +16,17 @@
 <meta property="og:image" content="og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mill Creek Systems — Custom Webapps, CRMs & ERPs">
 <meta name="twitter:description" content="Modern systems for businesses that work with their hands. Tailor-made internal systems, customer portals, and enterprise platforms.">
 <meta name="twitter:image" content="og-image.png">
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root { box-sizing: border-box; }
   * { box-sizing: inherit; }
@@ -62,195 +69,10 @@
   }
   .field-input:focus { border-bottom-color: #2FADC4; }
   .field-input::placeholder { color: #8DA0A9; }
-  
-  .tech-tag {
-    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500;
-    color: #123350; background: rgba(18,51,80,0.06); border: 1px solid rgba(18,51,80,0.15);
-    padding: 4px 10px; border-radius: 4px; margin: 0 6px 6px 0;
-  }
 
-  /* Interactive UI Preview Showcase Components */
-  .preview-card {
-    background: #FFFFFF;
-    border-radius: 12px;
-    border: 1px solid #D0DFDE;
-    box-shadow: 0 16px 32px rgba(18,51,80,0.08);
-    overflow: hidden;
-    margin-bottom: 60px;
-  }
-  
-  .browser-header {
-    background: #123350;
-    padding: 12px 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .browser-dots { display: flex; gap: 6px; }
-  .browser-dot { width: 10px; height: 10px; border-radius: 50%; background: #2A4D6C; }
-  .browser-dot.red { background: #FF5F56; }
-  .browser-dot.yellow { background: #FFBD2E; }
-  .browser-dot.green { background: #27C93F; }
-  
-  .browser-tab {
-    background: #1E4366;
-    color: #92B0C8;
-    padding: 4px 14px;
-    border-radius: 6px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .browser-tab.active { background: #E7EFEE; color: #123350; font-weight: 600; }
-  
-  /* Mock UI Content Layouts */
-  .dashboard-grid {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    min-height: 440px;
-    background: #F4F8F8;
-  }
-  
-  .mock-sidebar {
-    background: #123350;
-    color: #A5C0D4;
-    padding: 20px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .sidebar-item {
-    padding: 10px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.15s ease;
-  }
-  .sidebar-item:hover, .sidebar-item.active { background: #2FADC4; color: #FFFFFF; }
-  
-  .mock-main {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  
-  .stat-card {
-    background: #FFFFFF;
-    padding: 16px 20px;
-    border-radius: 8px;
-    border: 1px solid #E1ECEB;
-  }
-  .stat-val { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 800; color: #123350; }
-  .stat-lbl { font-size: 12px; color: #627988; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-  
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #FFFFFF;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #E1ECEB;
-    font-size: 14px;
-  }
-  .data-table th { background: #EBF3F3; text-align: left; padding: 12px 16px; color: #123350; font-family: 'Montserrat', sans-serif; font-size: 12px; text-transform: uppercase; }
-  .data-table td { padding: 12px 16px; border-top: 1px solid #EBF3F3; color: #2A455D; }
-  
-  .badge {
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 700;
-    font-family: 'IBM Plex Mono', monospace;
-    text-transform: uppercase;
-  }
-  .badge-success { background: #D2F4EA; color: #087A5C; }
-  .badge-pending { background: #FFF0C2; color: #8A6200; }
-  .badge-active { background: #DDF3F7; color: #126F82; }
-
-  /* Service Highlight Grid */
-  .offering-grid {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(310px, 1fr) );
-    gap: 24px;
-    margin-bottom: 60px;
-  }
-  
-  .offering-card {
-    background: #FFFFFF;
-    border: 1px solid #CFDDDC;
-    border-radius: 10px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .offering-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(18,51,80,0.07);
-    border-color: #2FADC4;
-  }
-  
-  .offering-icon {
-    width: 44px; height: 44px;
-    background: rgba(47,173,196,0.12);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    color: #2FADC4;
-    margin-bottom: 18px;
-  }
-  
-  .offering-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    color: #123350;
-    margin-bottom: 10px;
-  }
-  
-  .offering-desc {
-    color: #486575;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-
-  /* Interactive Tabbed UI Showcase */
-  .tab-btn {
-    padding: 10px 18px;
-    border: none;
-    background: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #5B7280;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s ease;
-  }
-  .tab-btn.active {
-    color: #123350;
-    border-bottom-color: #2FADC4;
-  }
-
-  /* Header Branding Image */
+  /* Brand Header Image */
   .brand-logo {
-    height: 48px;
+    height: 52px;
     width: auto;
     display: block;
   }
@@ -267,10 +89,7 @@
     .track-scope { padding-left: 0 !important; margin-top: 2px; }
     .tag-col { flex-basis: auto !important; margin-bottom: 4px; }
     .header-tagline { display: none !important; }
-    .dashboard-grid { grid-template-columns: 1fr; }
-    .mock-sidebar { display: none; }
-    .stats-row { grid-template-columns: 1fr; }
-    .brand-logo { height: 40px; }
+    .brand-logo { height: 42px; }
   }
 </style>
 </head>
@@ -278,241 +97,121 @@
 
 <div style="width: 100%; min-height: 100vh;">
 
-  <!-- Sticky Header with Logo image -->
+  <!-- Header Section with Logo -->
   <div style="position: sticky; top: 0; z-index: 50; background: #E7EFEE; border-bottom: 1px solid #C7D6D5;">
-    <div class="container" style="padding: 12px 40px;">
+    <div class="container" style="padding: 14px 40px;">
       <div class="row top-row" style="justify-content: space-between; align-items: center; gap: 20px;">
-        <div style="display: flex; align-items: center; gap: 16px; min-width: 0;">
-          <a href="#" style="display: flex; align-items: center; gap: 12px;">
-            <img src="og-image.png" alt="Mill Creek Systems" class="brand-logo">
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <a href="#" style="display: flex; align-items: center;">
+            <img src="og-image.png" alt="Mill Creek Systems Logo" class="brand-logo">
           </a>
-          <span class="header-tagline" style="color: #728896; font-size: 14px; border-left: 1px solid #C7D6D5; padding-left: 16px; font-weight: 600;">
+          <span class="header-tagline" style="color: #627988; font-size: 15px; border-left: 1px solid #C7D6D5; padding-left: 18px; font-weight: 500;">
             Modern systems for businesses that work with their hands.
           </span>
         </div>
         <div>
-          <a href="#contact" class="cta" style="background: #123350; color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; padding: 10px 20px; border-radius: 6px; letter-spacing: 0.05em; text-transform: uppercase;">Build Your System</a>
+          <a href="#contact" class="cta" style="background: #123350; color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; padding: 10px 22px; border-radius: 6px; letter-spacing: 0.05em; text-transform: uppercase;">Get in Touch</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <div style="padding: 65px 0 40px 0;">
+  <!-- Hero Banner -->
+  <div style="padding: 75px 0 60px 0;">
     <div class="container">
-      <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 320px;">
-          <div class="tag" style="margin-bottom: 12px;">Web Apps • Business Systems • Custom CRMs & ERPs</div>
-          <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: #123350; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.03em;">
-            Modern systems for businesses that work with their hands.
-          </h1>
-          <p style="font-size: 19px; color: #3E5A6C; line-height: 1.6; margin: 0 0 32px 0;">
-            Stop forcing your physical or field operations into generic, rigid SaaS platforms. We design and develop custom web-based CRMs, ERPs, client portals, and workflow automation tools exact to your business.
-          </p>
-          <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-            <a href="#demo" class="cta" style="background: #2FADC4; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; padding: 14px 28px; border-radius: 6px; letter-spacing: 0.03em;">Explore System Demos</a>
-            <a href="#contact" class="cta" style="background: #123350; color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 6px; letter-spacing: 0.03em;">Schedule Architecture Call</a>
-          </div>
+      <div style="max-width: 820px;">
+        <div class="tag" style="margin-bottom: 14px;">Yale, Michigan • Custom Web Architecture</div>
+        <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 48px; color: #123350; line-height: 1.15; margin: 0 0 24px 0; letter-spacing: -0.03em;">
+          Modern systems for businesses that work with their hands.
+        </h1>
+        <p style="font-size: 21px; color: #3E5A6C; line-height: 1.6; margin: 0 0 36px 0;">
+          We replace fragmented spreadsheets, paper logs, and rigid off-the-shelf software with purpose-built web applications, custom CRMs, ERPs, and workflow portals engineered directly for your operations.
+        </p>
+        <div>
+          <a href="#contact" class="cta" style="background: #2FADC4; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; padding: 16px 32px; border-radius: 6px; letter-spacing: 0.03em;">Discuss Your Project</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Interactive System Visualizer Showcase -->
-  <div id="demo" style="padding: 30px 0 20px 0;">
+  <!-- Core Services / Tracks -->
+  <div style="padding: 60px 0; background: rgba(18,51,80,0.02); border-top: 1px solid #D8E4E3; border-bottom: 1px solid #D8E4E3;">
     <div class="container">
-      <div class="tag" style="margin-bottom: 8px;">Interactive Visualizer</div>
-      <h2 class="section-head">What We Build For You</h2>
-      <p class="section-subhead">Explore interactive preview models of custom business applications engineered to automate and scale core operations.</p>
-      
-      <!-- System Type Selector Tabs -->
-      <div style="display: flex; gap: 12px; margin-bottom: 20px; border-bottom: 2px solid #D0DFDE; padding-bottom: 2px; overflow-x: auto;">
-        <button class="tab-btn active" onclick="switchTab('crm')">Custom Web CRM</button>
-        <button class="tab-btn" onclick="switchTab('erp')">Operational ERP</button>
-        <button class="tab-btn" onclick="switchTab('portal')">Client & Vendor Portal</button>
-        <button class="tab-btn" onclick="switchTab('workflow')">Job & Dispatch System</button>
-      </div>
+      <div class="tag" style="margin-bottom: 8px;">What We Do</div>
+      <h2 class="section-head">Tailored Software Solutions</h2>
+      <p class="section-subhead">Every feature is designed around how your team actually works in the office and out in the field.</p>
 
-      <!-- Preview Browser Frame -->
-      <div class="preview-card">
-        <div class="browser-header">
-          <div class="browser-dots">
-            <div class="browser-dot red"></div>
-            <div class="browser-dot yellow"></div>
-            <div class="browser-dot green"></div>
-          </div>
-          <div class="browser-tab active" id="browser-url">
-            <span style="color:#2FADC4;">🔒</span> https://app.millcreeksystems.io/custom-crm
-          </div>
-        </div>
-
-        <!-- Dynamic Mock UI Shell -->
-        <div class="dashboard-grid">
-          <!-- Sidebar -->
-          <div class="mock-sidebar">
-            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #507798; margin-bottom: 12px;">Mill Creek Core Engine</div>
-            <div class="sidebar-item active">📊 Dashboard</div>
-            <div class="sidebar-item">👥 Accounts & Pipeline</div>
-            <div class="sidebar-item">📦 Inventory & Orders</div>
-            <div class="sidebar-item">⚡ Workflows & Automations</div>
-            <div class="sidebar-item">📈 Financial Analytics</div>
-            <div class="sidebar-item" style="margin-top: auto; opacity: 0.7;">⚙️ System Settings</div>
-          </div>
-
-          <!-- Main Dashboard Mock Area -->
-          <div class="mock-main" id="ui-content">
-            <!-- Rendered by JS below -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Detailed Offerings Cards Grid -->
-  <div style="padding: 40px 0 20px 0; background: rgba(18,51,80,0.02); border-top: 1px solid #D8E4E3; border-bottom: 1px solid #D8E4E3;">
-    <div class="container" style="padding-top: 40px;">
-      <div class="tag" style="margin-bottom: 8px;">Core Offerings</div>
-      <h2 class="section-head">Tailored Software Architecture</h2>
-      <p class="section-subhead">From custom web apps for startups to enterprise-wide operational systems, we handle every layer of product design, database engineering, and full-stack development.</p>
-
-      <div class="offering-grid">
-        <!-- Offering 1 -->
-        <div class="offering-card">
-          <div>
-            <div class="offering-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <div class="offering-title">Custom Web-Based CRMs</div>
-            <div class="offering-desc">Purpose-built lead tracking, automated sales pipelines, and customer account management tailored strictly around your unique business operations.</div>
-          </div>
-          <div>
-            <div class="tech-tag">Pipeline Tracking</div>
-            <div class="tech-tag">Email Integration</div>
-            <div class="tech-tag">Lead Scoring</div>
-          </div>
-        </div>
-
-        <!-- Offering 2 -->
-        <div class="offering-card">
-          <div>
-            <div class="offering-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </div>
-            <div class="offering-title">Tailored ERP Systems</div>
-            <div class="offering-desc">Centralize physical operations with unified inventory management, procurement tracking, job costing, and resource allocation.</div>
-          </div>
-          <div>
-            <div class="tech-tag">Inventory Control</div>
-            <div class="tech-tag">Order Processing</div>
-            <div class="tech-tag">Job Costing</div>
-          </div>
-        </div>
-
-        <!-- Offering 3 -->
-        <div class="offering-card">
-          <div>
-            <div class="offering-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            </div>
-            <div class="offering-title">Full-Stack Web Applications</div>
-            <div class="offering-desc">SaaS products and robust internal tools engineered with modern frameworks, high-performance databases, and intuitive user interfaces.</div>
-          </div>
-          <div>
-            <div class="tech-tag">React / Vue</div>
-            <div class="tech-tag">Node / Python</div>
-            <div class="tech-tag">PostgreSQL</div>
-          </div>
-        </div>
-
-        <!-- Offering 4 -->
-        <div class="offering-card">
-          <div>
-            <div class="offering-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-            </div>
-            <div class="offering-title">Workflow & Dispatch Automation</div>
-            <div class="offering-desc">Replace manual spreadsheets with custom dispatch boards, automated scheduling, mobile-friendly field updates, and instant client notifications.</div>
-          </div>
-          <div>
-            <div class="tech-tag">Real-Time Scheduling</div>
-            <div class="tech-tag">SMS / Email Alerts</div>
-            <div class="tech-tag">API Gateways</div>
-          </div>
-        </div>
-
-        <!-- Offering 5 -->
-        <div class="offering-card">
-          <div>
-            <div class="offering-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <div class="offering-title">Client & Vendor Portals</div>
-            <div class="offering-desc">Secure web portals allowing your customers to view orders, pay invoices, submit support tickets, and track real-time project progress.</div>
-          </div>
-          <div>
-            <div class="tech-tag">Role Auth</div>
-            <div class="tech-tag">Stripe Invoicing</div>
-            <div class="tech-tag">Secure Docs</div>
-          </div>
-        </div>
-
-        <!-- Offering 6 -->
-        <div class="offering-card">
-          <div>
-            <div class="offering-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-            </div>
-            <div class="offering-title">Legacy System Integrations</div>
-            <div class="offering-desc">Connect modern web applications with legacy software, databases, QuickBooks, field equipment, and third-party APIs into one platform.</div>
-          </div>
-          <div>
-            <div class="tech-tag">REST & GraphQL APIs</div>
-            <div class="tech-tag">QuickBooks Integration</div>
-            <div class="tech-tag">Webhooks</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Delivery Method Section -->
-  <div style="padding: 60px 0;">
-    <div class="container">
-      <div class="tag" style="margin-bottom: 8px;">Development Process</div>
-      <h2 class="section-head">How We Build Systems</h2>
-      <p class="section-subhead">A straightforward, transparent engineering roadmap built for reliability and fast execution.</p>
-
-      <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 32px;">
         
-        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 24px; border-radius: 8px; border: 1px solid #CFDDDC;">
+        <div class="row track-row" style="align-items: baseline;">
+          <div class="tag-col" style="flex: 0 0 240px;">
+            <div class="label" style="font-size: 20px;">Custom CRMs & ERPs</div>
+          </div>
+          <div class="track-scope" style="flex: 1; padding-left: 20px; color: #486575; font-size: 17px; line-height: 1.6;">
+            Tailor-made internal systems to track jobs, customer relationships, inventory, bidding, and equipment without the monthly seat fees or useless bloat of generic SaaS platforms.
+          </div>
+        </div>
+
+        <div class="row track-row" style="align-items: baseline;">
+          <div class="tag-col" style="flex: 0 0 240px;">
+            <div class="label" style="font-size: 20px;">Client & Field Portals</div>
+          </div>
+          <div class="track-scope" style="flex: 1; padding-left: 20px; color: #486575; font-size: 17px; line-height: 1.6;">
+            Secure web apps for your customers to request quotes, view job statuses, pay invoices, and download project files, alongside mobile-friendly dashboards for field technicians.
+          </div>
+        </div>
+
+        <div class="row track-row" style="align-items: baseline;">
+          <div class="tag-col" style="flex: 0 0 240px;">
+            <div class="label" style="font-size: 20px;">Workflow Automation</div>
+          </div>
+          <div class="track-scope" style="flex: 1; padding-left: 20px; color: #486575; font-size: 17px; line-height: 1.6;">
+            Streamline job dispatch, automated SMS or email updates, digital signature collection, and database sync across your existing tools and APIs.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Process Methodology -->
+  <div style="padding: 70px 0;">
+    <div class="container">
+      <div class="tag" style="margin-bottom: 8px;">Our Process</div>
+      <h2 class="section-head">How We Deliver Results</h2>
+      <p class="section-subhead">A practical approach to building custom software that works on day one.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        
+        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 28px; border-radius: 8px; border: 1px solid #CFDDDC;">
           <div class="hex-num">01</div>
           <div>
-            <div class="label">Architecture & Process Discovery</div>
-            <div style="color: #486575; font-size: 16px;">We analyze your existing workflows, spreadsheets, and operational bottlenecks to design a system architecture that directly solves your team's day-to-day pain points.</div>
+            <div class="label">Operational Discovery</div>
+            <div style="color: #486575; font-size: 17px; line-height: 1.6;">We examine your actual day-to-day workflow, identifying manual bottlenecks, error-prone data entry, and communication gaps between office staff and field crews.</div>
           </div>
         </div>
 
-        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 24px; border-radius: 8px; border: 1px solid #CFDDDC;">
+        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 28px; border-radius: 8px; border: 1px solid #CFDDDC;">
           <div class="hex-num">02</div>
           <div>
-            <div class="label">Rapid UI Prototype & Database Schema</div>
-            <div style="color: #486575; font-size: 16px;">You get clickable interactive prototypes and relational database designs early. We confirm every field, button, and user permission before writing core production code.</div>
+            <div class="label">System Architecture & Design</div>
+            <div style="color: #486575; font-size: 17px; line-height: 1.6;">We map out database structures, user roles, and clean user interfaces so you can review and refine every screen before development begins.</div>
           </div>
         </div>
 
-        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 24px; border-radius: 8px; border: 1px solid #CFDDDC;">
+        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 28px; border-radius: 8px; border: 1px solid #CFDDDC;">
           <div class="hex-num">03</div>
           <div>
-            <div class="label">Full-Stack Custom Development</div>
-            <div style="color: #486575; font-size: 16px;">We build your system using production-grade web technologies (React, Node/Python, PostgreSQL/SQL Server, cloud hosting). Fast, responsive, and mobile-ready for office and field staff.</div>
+            <div class="label">Full-Stack Development</div>
+            <div style="color: #486575; font-size: 17px; line-height: 1.6;">We engineer reliable, fast, and secure web platforms optimized for both desktop browsers and mobile field devices.</div>
           </div>
         </div>
 
-        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 24px; border-radius: 8px; border: 1px solid #CFDDDC;">
+        <div class="row method-row" style="align-items: flex-start; gap: 24px; background: #FFFFFF; padding: 28px; border-radius: 8px; border: 1px solid #CFDDDC;">
           <div class="hex-num">04</div>
           <div>
-            <div class="label">Deployment, Training & Continuous Evolution</div>
-            <div style="color: #486575; font-size: 16px;">We handle server deployment, data migration from legacy tools, staff onboarding, and ongoing maintenance. As your business grows, your custom software adapts effortlessly.</div>
+            <div class="label">Launch & Support</div>
+            <div style="color: #486575; font-size: 17px; line-height: 1.6;">We handle deployment, system migration, and training. As your business scales and needs evolve, we continuously support and update your system.</div>
           </div>
         </div>
 
@@ -520,72 +219,56 @@
     </div>
   </div>
 
-  <!-- Contact Section -->
-  <div id="contact" style="padding: 70px 0;">
+  <!-- Contact Form Section -->
+  <div id="contact" style="padding: 70px 0; background: #E2ECEB; border-top: 1px solid #CFDDDC;">
     <div class="container">
       <div class="row contact-row" style="gap: 50px;">
         <div style="flex: 1;">
-          <div class="tag" style="margin-bottom: 8px;">Let's Talk Systems</div>
-          <h2 class="section-head">Ready to build software that fits your exact business?</h2>
-          <p style="color: #486575; font-size: 18px; line-height: 1.6; margin-bottom: 24px;">
-            Tell us about your business operations, what software or spreadsheet nightmare you're currently dealing with, and what you need to build.
+          <div class="tag" style="margin-bottom: 8px;">Contact Us</div>
+          <h2 class="section-head">Let's talk about your system.</h2>
+          <p style="color: #486575; font-size: 18px; line-height: 1.6; margin-bottom: 30px;">
+            Have questions or a project in mind? Reach out and we'll discuss how a custom system can streamline your business operations.
           </p>
-          <div style="display: flex; flex-direction: column; gap: 12px; color: #123350; font-size: 16px;">
-            <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="display: flex; flex-direction: column; gap: 16px; color: #123350; font-size: 17px;">
+            <div style="display: flex; align-items: flex-start;">
               <span class="hex-bullet"></span>
-              <strong>Location:</strong> Based in Yale, Michigan (Serving clients nationwide)
+              <div><strong>Location:</strong> Yale, Michigan</div>
             </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: flex-start;">
               <span class="hex-bullet"></span>
-              <strong>Focus:</strong> Modern systems for businesses that work with their hands.
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <span class="hex-bullet"></span>
-              <strong>Response Time:</strong> Direct developer reply within 24 hours
+              <div><strong>Focus:</strong> Modern systems for businesses that work with their hands.</div>
             </div>
           </div>
         </div>
 
-        <div style="flex: 1; background: #FFFFFF; padding: 32px; border-radius: 10px; border: 1px solid #CFDDDC; box-shadow: 0 8px 24px rgba(18,51,80,0.05);">
-          <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. Mill Creek Systems will contact you within 24 hours.');">
-            <div style="margin-bottom: 20px;">
-              <label class="label" style="font-size: 14px;" for="name">Your Name</label>
-              <input type="text" id="name" class="field-input" placeholder="e.g. John Doe" required>
-            </div>
-            <div style="margin-bottom: 20px;">
-              <label class="label" style="font-size: 14px;" for="email">Email Address</label>
-              <input type="email" id="email" class="field-input" placeholder="john@yourcompany.com" required>
-            </div>
-            <div style="margin-bottom: 20px;">
-              <label class="label" style="font-size: 14px;" for="project">What are you looking to build?</label>
-              <select id="project" class="field-input" style="cursor: pointer;" required>
-                <option value="" disabled selected>Select system type...</option>
-                <option value="crm">Custom Web-based CRM</option>
-                <option value="erp">Custom Business ERP</option>
-                <option value="webapp">Full Web App / Software MVP</option>
-                <option value="portal">Client / Vendor Portal</option>
-                <option value="workflow">Workflow & Automation Tool</option>
-                <option value="other">System Redesign / Integration</option>
-              </select>
+        <div style="flex: 1; background: #FFFFFF; padding: 36px; border-radius: 10px; border: 1px solid #CFDDDC; box-shadow: 0 6px 20px rgba(18,51,80,0.04);">
+          <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will be in touch shortly.');">
+            <div style="margin-bottom: 24px;">
+              <label class="label" style="font-size: 15px;" for="name">Name</label>
+              <input type="text" id="name" class="field-input" placeholder="Your name" required>
             </div>
             <div style="margin-bottom: 24px;">
-              <label class="label" style="font-size: 14px;" for="message">Project Details / Current Pain Points</label>
-              <textarea id="message" class="field-input" rows="4" placeholder="Briefly describe what your business does and what custom features you need..." style="resize: vertical;"></textarea>
+              <label class="label" style="font-size: 15px;" for="email">Email</label>
+              <input type="email" id="email" class="field-input" placeholder="your@email.com" required>
             </div>
-            <button type="submit" class="cta" style="width: 100%; border: none; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; padding: 14px; border-radius: 6px; cursor: pointer; text-align: center;">Request Technical Proposal</button>
+            <div style="margin-bottom: 28px;">
+              <label class="label" style="font-size: 15px;" for="message">Message</label>
+              <textarea id="message" class="field-input" rows="4" placeholder="Tell us about your project or current operational challenges..." style="resize: vertical;" required></textarea>
+            </div>
+            <button type="submit" class="cta" style="width: 100%; border: none; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; padding: 16px; border-radius: 6px; cursor: pointer; text-align: center;">Send Message</button>
           </form>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer featuring full logo brand image -->
-  <div style="background: #123350; color: #8BA4B5; padding: 32px 0; font-size: 14px; border-top: 1px solid #1E4366;">
+  <!-- Footer -->
+  <div style="background: #123350; color: #8BA4B5; padding: 36px 0; font-size: 14px; border-top: 1px solid #1E4366;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <img src="og-image.png" alt="Mill Creek Systems Logo" style="height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 0.85;">
-        <span style="color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 700;">Mill Creek Systems</span>
-        <span>— Yale, Michigan</span>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="og-image.png" alt="Mill Creek Systems" style="height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;">
+        <span style="color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;">Mill Creek Systems</span>
+        <span>• Yale, Michigan</span>
       </div>
       <div>
         © 2026 Mill Creek Systems. All rights reserved.
@@ -595,263 +278,5 @@
 
 </div>
 
-<!-- Interactive UI Prototype Script -->
-<script>
-  const uiTemplates = {
-    crm: {
-      url: 'https://app.millcreeksystems.io/custom-crm',
-      content: `
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #123350; margin: 0;">Sales Pipeline & CRM</h3>
-            <span style="color: #627988; font-size: 13px;">Custom Lead Management Engine</span>
-          </div>
-          <button style="background: #2FADC4; color: #fff; border: none; padding: 8px 14px; border-radius: 5px; font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 12px; cursor: pointer;">+ New Lead</button>
-        </div>
-
-        <div class="stats-row">
-          <div class="stat-card">
-            <div class="stat-lbl">Active Pipeline</div>
-            <div class="stat-val">$284,500</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Qualified Deals</div>
-            <div class="stat-val">18 Deals</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Win Rate (30d)</div>
-            <div class="stat-val" style="color: #087A5C;">68.4%</div>
-          </div>
-        </div>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Account / Lead</th>
-              <th>Stage</th>
-              <th>Deal Value</th>
-              <th>Last Touch</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Apex Industrial Supply</strong><br><span style="font-size:11px; color:#889">Contact: Sarah Jenkins</span></td>
-              <td><span class="badge badge-active">Proposal Sent</span></td>
-              <td>$45,000</td>
-              <td>Today, 2:15 PM</td>
-              <td><a href="#" style="color:#2FADC4; font-weight:700; font-size:12px;">View Record →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Summit Logistics LLC</strong><br><span style="font-size:11px; color:#889">Contact: Mark Miller</span></td>
-              <td><span class="badge badge-pending">Discovery Call</span></td>
-              <td>$112,000</td>
-              <td>Yesterday</td>
-              <td><a href="#" style="color:#2FADC4; font-weight:700; font-size:12px;">View Record →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Vanguard Tech</strong><br><span style="font-size:11px; color:#889">Contact: David Vance</span></td>
-              <td><span class="badge badge-success">Closed - Won</span></td>
-              <td>$78,500</td>
-              <td>Sep 21, 2026</td>
-              <td><a href="#" style="color:#2FADC4; font-weight:700; font-size:12px;">View Record →</a></td>
-            </tr>
-          </tbody>
-        </table>
-      `
-    },
-    erp: {
-      url: 'https://app.millcreeksystems.io/operations-erp',
-      content: `
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #123350; margin: 0;">Operational ERP & Inventory</h3>
-            <span style="color: #627988; font-size: 13px;">Real-Time Stock, Procurement & Job Costing</span>
-          </div>
-          <button style="background: #123350; color: #fff; border: none; padding: 8px 14px; border-radius: 5px; font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 12px; cursor: pointer;">Reorder Low Stock</button>
-        </div>
-
-        <div class="stats-row">
-          <div class="stat-card">
-            <div class="stat-lbl">Active Job Orders</div>
-            <div class="stat-val">34 Jobs</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Total Inventory Val</div>
-            <div class="stat-val">$1,420,800</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Pending Shipments</div>
-            <div class="stat-val" style="color: #8A6200;">7 En Route</div>
-          </div>
-        </div>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>SKU / Part Name</th>
-              <th>Location</th>
-              <th>On Hand</th>
-              <th>Status</th>
-              <th>Unit Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>HD-PUMP-4022</strong><br><span style="font-size:11px; color:#889">Hydraulic Control Module</span></td>
-              <td>Whse A - Bay 14</td>
-              <td>142 units</td>
-              <td><span class="badge badge-success">In Stock</span></td>
-              <td>$385.00</td>
-            </tr>
-            <tr>
-              <td><strong>VALVE-SS-09</strong><br><span style="font-size:11px; color:#889">3/4" Stainless Ball Valve</span></td>
-              <td>Whse B - Rack 02</td>
-              <td>6 units</td>
-              <td><span class="badge badge-pending">Low Stock Alert</span></td>
-              <td>$42.50</td>
-            </tr>
-            <tr>
-              <td><strong>CTRL-BOARD-V3</strong><br><span style="font-size:11px; color:#889">Custom Logic Board Assembly</span></td>
-              <td>Whse A - Bay 01</td>
-              <td>89 units</td>
-              <td><span class="badge badge-success">In Stock</span></td>
-              <td>$210.00</td>
-            </tr>
-          </tbody>
-        </table>
-      `
-    },
-    portal: {
-      url: 'https://app.millcreeksystems.io/client-portal',
-      content: `
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #123350; margin: 0;">Client Account Portal</h3>
-            <span style="color: #627988; font-size: 13px;">Customer Order Tracking & Deliverables</span>
-          </div>
-          <button style="background: #2FADC4; color: #fff; border: none; padding: 8px 14px; border-radius: 5px; font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 12px; cursor: pointer;">Download Docs (PDF)</button>
-        </div>
-
-        <div class="stats-row">
-          <div class="stat-card">
-            <div class="stat-lbl">Active Project</div>
-            <div class="stat-val" style="font-size:18px;">Phase 2 Fabrication</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Project Completion</div>
-            <div class="stat-val" style="color: #087A5C;">75%</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Outstanding Balance</div>
-            <div class="stat-val">$0.00 (Paid)</div>
-          </div>
-        </div>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Deliverable / Invoice</th>
-              <th>Due Date</th>
-              <th>Status</th>
-              <th>File</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>System Architecture Specification</strong></td>
-              <td>Aug 14, 2026</td>
-              <td><span class="badge badge-success">Approved</span></td>
-              <td><a href="#" style="color:#2FADC4; font-weight:700; font-size:12px;">Arch_Spec_v2.pdf</a></td>
-            </tr>
-            <tr>
-              <td><strong>Milestone 2 Sign-off</strong></td>
-              <td>Sep 10, 2026</td>
-              <td><span class="badge badge-success">Completed</span></td>
-              <td><a href="#" style="color:#2FADC4; font-weight:700; font-size:12px;">Signoff_M2.pdf</a></td>
-            </tr>
-            <tr>
-              <td><strong>Final Onsite Deployment</strong></td>
-              <td>Oct 05, 2026</td>
-              <td><span class="badge badge-active">In Progress</span></td>
-              <td><span style="color:#889; font-size:12px;">Pending Release</span></td>
-            </tr>
-          </tbody>
-        </table>
-      `
-    },
-    workflow: {
-      url: 'https://app.millcreeksystems.io/dispatch-workflow',
-      content: `
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #123350; margin: 0;">Job Dispatch & Workflows</h3>
-            <span style="color: #627988; font-size: 13px;">Real-Time Field Crew Scheduling</span>
-          </div>
-          <button style="background: #2FADC4; color: #fff; border: none; padding: 8px 14px; border-radius: 5px; font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 12px; cursor: pointer;">+ Assign Crew</button>
-        </div>
-
-        <div class="stats-row">
-          <div class="stat-card">
-            <div class="stat-lbl">Scheduled Today</div>
-            <div class="stat-val">12 Dispatch Jobs</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">Crews in Field</div>
-            <div class="stat-val">4 Active Teams</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-lbl">On-Time Completion</div>
-            <div class="stat-val" style="color:#087A5C;">98.2%</div>
-          </div>
-        </div>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Job ID & Location</th>
-              <th>Assigned Crew</th>
-              <th>Window</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>JOB-9041</strong><br><span style="font-size:11px; color:#889">Site A - Port Huron Facility</span></td>
-              <td>Crew 1 (Tech: R. Harrison)</td>
-              <td>08:00 AM - 11:30 AM</td>
-              <td><span class="badge badge-success">Completed</span></td>
-            </tr>
-            <tr>
-              <td><strong>JOB-9042</strong><br><span style="font-size:11px; color:#889">Site C - Yale Regional Hub</span></td>
-              <td>Crew 3 (Tech: T. Baker)</td>
-              <td>01:00 PM - 04:00 PM</td>
-              <td><span class="badge badge-active">En Route</span></td>
-            </tr>
-            <tr>
-              <td><strong>JOB-9043</strong><br><span style="font-size:11px; color:#889">Site B - Marysville Plant</span></td>
-              <td>Crew 2 (Tech: D. Stevens)</td>
-              <td>03:30 PM - 06:00 PM</td>
-              <td><span class="badge badge-pending">Scheduled</span></td>
-            </tr>
-          </tbody>
-        </table>
-      `
-    }
-  };
-
-  function switchTab(key) {
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    const tpl = uiTemplates[key];
-    document.getElementById('browser-url').innerHTML = `<span style="color:#2FADC4;">🔒</span> ${tpl.url}`;
-    document.getElementById('ui-content').innerHTML = tpl.content;
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('ui-content').innerHTML = uiTemplates.crm.content;
-  });
-</script>
 </body>
 </html>

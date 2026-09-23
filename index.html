@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Mill Creek Systems builds custom software systems, web applications, web-based CRMs, and ERPs for businesses that work with their hands. Based in Yale, Michigan.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Mill Creek Systems — Modern Systems for Businesses That Work with Their Hands</title>
 
 <!-- Open Graph / Social Media -->
@@ -12,6 +14,14 @@
 <meta property="og:title" content="Mill Creek Systems — Custom Webapps, CRMs & ERPs">
 <meta property="og:description" content="Modern systems for businesses that work with their hands. Tailor-made internal systems, customer portals, and enterprise platforms.">
 <meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mill Creek Systems — Custom Webapps, CRMs & ERPs">
+<meta name="twitter:description" content="Modern systems for businesses that work with their hands. Tailor-made internal systems, customer portals, and enterprise platforms.">
+<meta name="twitter:image" content="og-image.png">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,11 +70,11 @@
   .field-input:focus { border-bottom-color: #2FADC4; }
   .field-input::placeholder { color: #8DA0A9; }
 
-  /* Brand Logo Inline Block */
-  .brand-logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  /* Brand Header Image */
+  .brand-logo {
+    height: 52px;
+    width: auto;
+    display: block;
   }
 
   @media (max-width: 760px) {
@@ -79,6 +89,7 @@
     .track-scope { padding-left: 0 !important; margin-top: 2px; }
     .tag-col { flex-basis: auto !important; margin-bottom: 4px; }
     .header-tagline { display: none !important; }
+    .brand-logo { height: 42px; }
   }
 </style>
 </head>
@@ -86,28 +97,13 @@
 
 <div style="width: 100%; min-height: 100vh;">
 
-  <!-- Header Section with Embedded Logo -->
+  <!-- Header Section with Logo -->
   <div style="position: sticky; top: 0; z-index: 50; background: #E7EFEE; border-bottom: 1px solid #C7D6D5;">
     <div class="container" style="padding: 14px 40px;">
       <div class="row top-row" style="justify-content: space-between; align-items: center; gap: 20px;">
         <div style="display: flex; align-items: center; gap: 18px;">
-          <a href="#" class="brand-logo-wrap">
-            <!-- Inline Vector Hex River Logo -->
-            <svg width="48" height="52" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 5 L90 27.5 L90 72.5 L50 95 L10 72.5 L10 27.5 Z" stroke="#123350" stroke-width="6" fill="#123350"/>
-              <path d="M45 20 Q 60 30, 45 45 T 55 75 T 40 85" stroke="#2FADC4" stroke-width="8" fill="none" stroke-linecap="round"/>
-              <path d="M30 35 C 35 25, 60 25, 65 35" fill="#2E7D32"/>
-              <circle cx="50" cy="5" r="5" fill="#123350"/>
-              <circle cx="90" cy="27.5" r="5" fill="#123350"/>
-              <circle cx="90" cy="72.5" r="5" fill="#123350"/>
-              <circle cx="50" cy="95" r="5" fill="#123350"/>
-              <circle cx="10" cy="72.5" r="5" fill="#123350"/>
-              <circle cx="10" cy="27.5" r="5" fill="#123350"/>
-            </svg>
-            <div style="display: flex; flex-direction: column;">
-              <span style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 18px; color: #123350; letter-spacing: -0.02em; line-height: 1;">MILL CREEK</span>
-              <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; color: #2FADC4; letter-spacing: 0.25em; margin-top: 3px;">SYSTEMS</span>
-            </div>
+          <a href="#" style="display: flex; align-items: center;">
+            <img src="og-image.png" alt="Mill Creek Systems Logo" class="brand-logo">
           </a>
           <span class="header-tagline" style="color: #627988; font-size: 15px; border-left: 1px solid #C7D6D5; padding-left: 18px; font-weight: 500;">
             Modern systems for businesses that work with their hands.
@@ -269,11 +265,8 @@
   <!-- Footer -->
   <div style="background: #123350; color: #8BA4B5; padding: 36px 0; font-size: 14px; border-top: 1px solid #1E4366;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <svg width="28" height="30" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 5 L90 27.5 L90 72.5 L50 95 L10 72.5 L10 27.5 Z" stroke="#E7EFEE" stroke-width="6" fill="#E7EFEE"/>
-          <path d="M45 20 Q 60 30, 45 45 T 55 75 T 40 85" stroke="#2FADC4" stroke-width="8" fill="none" stroke-linecap="round"/>
-        </svg>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="og-image.png" alt="Mill Creek Systems" style="height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;">
         <span style="color: #E7EFEE; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;">Mill Creek Systems</span>
         <span>• Yale, Michigan</span>
       </div>

@@ -205,9 +205,9 @@
   .modal-backdrop.open { display: flex; }
   .modal-box {
     background: #E7EFEE;
-    width: 100%; max-width: 560px; max-height: 88vh;
+    width: 100%; max-width: 480px; max-height: 92vh;
     overflow-y: auto;
-    padding: 40px;
+    padding: 28px 32px;
     position: relative;
   }
   .modal-close {
@@ -217,7 +217,8 @@
     font-family: 'Source Sans 3', Arial, sans-serif;
   }
   @media (max-width: 760px) {
-    .modal-box { padding: 28px 20px; max-height: 92vh; }
+    .modal-box { padding: 22px 18px; max-height: 94vh; }
+    .modal-grid-2 { grid-template-columns: 1fr !important; gap: 10px !important; margin-bottom: 10px !important; }
     .container { padding: 0 24px; }
     .method-row, .track-row, .who-row, .top-row, .contact-row { flex-direction: column !important; align-items: flex-start !important; }
     .who-row { gap: 20px !important; }
@@ -496,42 +497,43 @@
   <div class="modal-backdrop" id="contact-modal" onclick="if (event.target === this) closeContactModal()">
     <div class="modal-box">
       <button type="button" class="modal-close" aria-label="Close" onclick="closeContactModal()">&times;</button>
-      <div class="tag" style="margin-bottom: 16px;">Start a conversation</div>
-      <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; line-height: 1.2; margin-bottom: 28px;">Tell us about the operation.</div>
+      <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 20px; line-height: 1.2; margin-bottom: 16px;">Tell us about the operation.</div>
 
       <form action="https://formspree.io/f/xqpaqjar" method="POST">
         <input type="hidden" name="_subject" value="New inquiry from the Mill Creek Systems website">
-        <div style="margin-bottom: 22px;">
-          <label class="tag" for="f-name" style="display: block; margin-bottom: 8px;">Name</label>
-          <input class="field-input" id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+        <div class="modal-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px;">
+          <div>
+            <label class="tag" for="f-name" style="display: block; margin-bottom: 6px;">Name</label>
+            <input class="field-input" id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+          </div>
+          <div>
+            <label class="tag" for="f-company" style="display: block; margin-bottom: 6px;">Company</label>
+            <input class="field-input" id="f-company" name="company" type="text" placeholder="Your company" autocomplete="organization" required>
+          </div>
         </div>
-        <div style="margin-bottom: 22px;">
-          <label class="tag" for="f-company" style="display: block; margin-bottom: 8px;">Company name</label>
-          <input class="field-input" id="f-company" name="company" type="text" placeholder="Your company" autocomplete="organization" required>
-        </div>
-        <div style="margin-bottom: 22px;">
-          <label class="tag" for="f-location" style="display: block; margin-bottom: 8px;">Location</label>
-          <input class="field-input" id="f-location" name="location" type="text" placeholder="City, state" autocomplete="address-level2" required>
-        </div>
-        <div class="row contact-row" style="gap: 24px;">
-          <div style="flex: 0 0 160px; margin-bottom: 22px;">
-            <label class="tag" for="f-contact-type" style="display: block; margin-bottom: 8px;">Contact by</label>
+        <div class="modal-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px;">
+          <div>
+            <label class="tag" for="f-location" style="display: block; margin-bottom: 6px;">Location</label>
+            <input class="field-input" id="f-location" name="location" type="text" placeholder="City, state" autocomplete="address-level2" required>
+          </div>
+          <div>
+            <label class="tag" for="f-contact-type" style="display: block; margin-bottom: 6px;">Contact by</label>
             <select class="field-input" id="f-contact-type" name="contact_type" required>
               <option value="Email">Email</option>
               <option value="Phone">Phone</option>
             </select>
           </div>
-          <div style="flex: 1; margin-bottom: 22px;">
-            <label class="tag" for="f-contact-info" style="display: block; margin-bottom: 8px;">Contact information</label>
-            <input class="field-input" id="f-contact-info" name="contact_info" type="text" placeholder="Email address or phone number" autocomplete="email" required>
-          </div>
         </div>
-        <div style="margin-bottom: 28px;">
-          <label class="tag" for="f-description" style="display: block; margin-bottom: 8px;">Description of services requested</label>
-          <textarea class="field-input" id="f-description" name="message" rows="4" placeholder="What's going on, and what you need help with" style="resize: vertical; font-family: 'Source Sans 3', Arial, sans-serif;" required></textarea>
+        <div style="margin-bottom: 12px;">
+          <label class="tag" for="f-contact-info" style="display: block; margin-bottom: 6px;">Email or phone number</label>
+          <input class="field-input" id="f-contact-info" name="contact_info" type="text" placeholder="Email address or phone number" autocomplete="email" required>
         </div>
-        <button type="submit" class="cta" style="display: inline-block; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.02em; padding: 15px 30px; border: none; cursor: pointer;">Send this to Mill Creek Systems</button>
-        <p style="margin-top: 18px; font-size: 14px; color: #5B7280; margin-bottom: 0;">This sends directly, no email app required. You'll land on a confirmation page once it goes through.</p>
+        <div style="margin-bottom: 16px;">
+          <label class="tag" for="f-description" style="display: block; margin-bottom: 6px;">What's going on</label>
+          <textarea class="field-input" id="f-description" name="message" rows="2" placeholder="What's going on, and what you need help with" style="resize: vertical; font-family: 'Source Sans 3', Arial, sans-serif;" required></textarea>
+        </div>
+        <button type="submit" class="cta" style="display: inline-block; background: #123350; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.02em; padding: 12px 26px; border: none; cursor: pointer;">Send this to Mill Creek Systems</button>
+        <p style="margin-top: 12px; font-size: 13px; color: #5B7280; margin-bottom: 0;">Sends directly, no email app required.</p>
       </form>
     </div>
   </div>
